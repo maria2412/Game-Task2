@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EndGame : MonoBehaviour {
 
-	void OnTriggerEnter2D()
+	void OnTriggerEnter2D(Collider2D colInfo)
 	{
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		if (colInfo.CompareTag ("Collidable")) {
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		}
 	}
 }
