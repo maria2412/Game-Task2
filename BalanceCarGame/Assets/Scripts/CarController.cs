@@ -16,6 +16,7 @@ public class CarController : MonoBehaviour {
 
 	void Update ()
 	{
+		//controls the movement of the car
 		movement = -Input.GetAxisRaw("Vertical") * speed;
 		rotation = Input.GetAxisRaw("Horizontal");
 	}
@@ -24,10 +25,12 @@ public class CarController : MonoBehaviour {
 	{
 		if (movement == 0f)
 		{
+			//no movement by the car
 			backWheel.useMotor = false;
 			frontWheel.useMotor = false;
 		} else
 		{
+			//if there is movement by the car
 			backWheel.useMotor = true;
 			frontWheel.useMotor = true;
 
