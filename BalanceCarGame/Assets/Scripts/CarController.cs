@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CarController : MonoBehaviour {
 
-	public float speed = 1300f;
+	public float speed = 1500f;
 	public float rotationSpeed = 15f;
 
 	public WheelJoint2D backWheel;
