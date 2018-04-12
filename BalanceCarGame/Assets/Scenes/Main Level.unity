@@ -305,7 +305,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 231508958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.2, y: 1.1, z: 0}
+  m_LocalPosition: {x: -16.3, y: 1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1713283816}
@@ -411,7 +411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e81d67685f20e42add6aa255645318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTimer: 3
+  endText: {fileID: 0}
+  finished: 0
 --- !u!1 &255927618
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +424,7 @@ GameObject:
   - component: {fileID: 255927620}
   - component: {fileID: 255927619}
   - component: {fileID: 255927622}
+  - component: {fileID: 255927623}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Collidable
@@ -532,6 +534,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &255927623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 255927618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e81d67685f20e42add6aa255645318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endText: {fileID: 925233397}
+  finished: 0
 --- !u!1 &565169746
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +557,7 @@ GameObject:
   - component: {fileID: 565169748}
   - component: {fileID: 565169747}
   - component: {fileID: 565169749}
+  - component: {fileID: 565169750}
   m_Layer: 0
   m_Name: Map
   m_TagString: Collidable
@@ -892,6 +908,19 @@ PolygonCollider2D:
       - {x: 33.86, y: -10.84}
       - {x: 33.82, y: -10.36}
       - {x: 33.8, y: -10.139999}
+--- !u!114 &565169750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 565169746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e81d67685f20e42add6aa255645318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endText: {fileID: 925233397}
+  finished: 0
 --- !u!1 &589827341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1163,7 @@ GameObject:
   - component: {fileID: 906425709}
   - component: {fileID: 906425708}
   - component: {fileID: 906425707}
+  - component: {fileID: 906425711}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -1236,6 +1266,93 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &906425711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906425706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e81d67685f20e42add6aa255645318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endText: {fileID: 925233397}
+  finished: 0
+--- !u!1 &925233395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 925233396}
+  - component: {fileID: 925233398}
+  - component: {fileID: 925233397}
+  m_Layer: 5
+  m_Name: endText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &925233396
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925233395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1214262524}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 0, y: -100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &925233397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925233395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &925233398
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925233395}
 --- !u!1 &1214262520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1439,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 589827342}
+  - {fileID: 925233396}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1561,6 +1679,7 @@ GameObject:
   - component: {fileID: 1956258507}
   - component: {fileID: 1956258506}
   - component: {fileID: 1956258505}
+  - component: {fileID: 1956258509}
   m_Layer: 0
   m_Name: Crate (1)
   m_TagString: Collidable
@@ -1670,3 +1789,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1956258509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956258504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e81d67685f20e42add6aa255645318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endText: {fileID: 925233397}
+  finished: 0
